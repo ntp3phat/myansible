@@ -1,7 +1,11 @@
-- name: Ping site
-  shell: ping -c 1 -w 2 noha.vn
-  register: ping_result
+---
+- hosts: inuc43
+  gather_facts: yes
+  tasks:
+    - name: Ping site
+      shell: ping -c 1 -w 2 noha.vn
+      register: ping_result
 
-- name: Ping result
-  debug:
-    msg: "{{ ping_result.stdout_lines }}"
+    - name: Ping result
+      debug:
+        msg: "{{ ping_result.stdout_lines }}"
