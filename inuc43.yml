@@ -1,6 +1,6 @@
 ---
 - hosts: inuc43
-  gather_facts: yes
+  gather_facts: no
   tasks:
     - name: Ping site
       shell: ping -c 1 -w 2 noha.vn
